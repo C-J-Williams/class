@@ -1,0 +1,18 @@
+{
+  "title": "Operation Match",
+  "categories": ["Addition", "Subtraction", "Multiplication", "Division"],
+  "items": [
+    { "type": "text", "content": "5 + 3", "answer": "Addition" },
+    { "type": "text", "content": "9 - 4", "answer": "Subtraction" },
+    { "type": "text", "content": "6 × 7", "answer": "Multiplication" },
+    { "type": "text", "content": "20 ÷ 5", "answer": "Division" },
+    { "type": "text", "content": "12 + 8", "answer": "Addition" },
+    { "type": "text", "content": "15 - 6", "answer": "Subtraction" },
+    { "type": "text", "content": "3 × 9", "answer": "Multiplication" },
+    { "type": "text", "content": "100 ÷ 10", "answer": "Division" },
+    { "type": "text", "content": "4 + 11", "answer": "Addition" },
+    { "type": "text", "content": "18 ÷ 3", "answer": "Division" },
+    { "type": "text", "content": "7 × 8", "answer": "Multiplication" },
+    { "type": "text", "content": "14 - 2", "answer": "Subtraction" }
+  ]
+}

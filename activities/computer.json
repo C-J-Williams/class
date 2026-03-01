@@ -1,0 +1,18 @@
+{
+  "title": "Technology Device Categories",
+  "categories": ["Input Device", "Output Device", "Storage Device", "Processing Device"],
+  "items": [
+    { "type": "text", "content": "Keyboard", "answer": "Input Device" },
+    { "type": "text", "content": "Monitor", "answer": "Output Device" },
+    { "type": "text", "content": "Hard Drive", "answer": "Storage Device" },
+    { "type": "text", "content": "CPU", "answer": "Processing Device" },
+    { "type": "text", "content": "Mouse", "answer": "Input Device" },
+    { "type": "text", "content": "Printer", "answer": "Output Device" },
+    { "type": "text", "content": "USB Flash Drive", "answer": "Storage Device" },
+    { "type": "text", "content": "Graphics Card", "answer": "Processing Device" },
+    { "type": "text", "content": "Scanner", "answer": "Input Device" },
+    { "type": "text", "content": "Speakers", "answer": "Output Device" },
+    { "type": "text", "content": "SSD", "answer": "Storage Device" },
+    { "type": "text", "content": "RAM", "answer": "Processing Device" }
+  ]
+}

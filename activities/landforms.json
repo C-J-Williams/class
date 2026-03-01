@@ -1,0 +1,18 @@
+{
+  "title": "Geography: Landform Types",
+  "categories": ["Mountain", "River", "Desert", "Island", "Forest"],
+  "items": [
+    { "type": "text", "content": "Sahara", "answer": "Desert" },
+    { "type": "text", "content": "Amazon", "answer": "River" },
+    { "type": "text", "content": "Everest", "answer": "Mountain" },
+    { "type": "text", "content": "Greenland", "answer": "Island" },
+    { "type": "text", "content": "Black Forest", "answer": "Forest" },
+    { "type": "text", "content": "Nile", "answer": "River" },
+    { "type": "text", "content": "Gobi", "answer": "Desert" },
+    { "type": "text", "content": "Rocky Mountains", "answer": "Mountain" },
+    { "type": "text", "content": "Borneo", "answer": "Island" },
+    { "type": "text", "content": "Sherwood", "answer": "Forest" },
+    { "type": "text", "content": "Danube", "answer": "River" },
+    { "type": "text", "content": "Andes", "answer": "Mountain" }
+  ]
+}

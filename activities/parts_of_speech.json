@@ -1,0 +1,14 @@
+{
+  "title": "Parts of Speech Sort",
+  "categories": ["Noun", "Verb", "Adjective", "Adverb"],
+  "items": [
+    { "type": "text", "content": "dog", "answer": "Noun" },
+    { "type": "text", "content": "run", "answer": "Verb" },
+    { "type": "text", "content": "yellow", "answer": "Adjective" },
+    { "type": "text", "content": "quickly", "answer": "Adverb" },
+    { "type": "text", "content": "teacher", "answer": "Noun" },
+    { "type": "text", "content": "slowly", "answer": "Adverb" },
+    { "type": "text", "content": "blue", "answer": "Adjective" },
+    { "type": "text", "content": "jump", "answer": "Verb" }
+  ]
+}

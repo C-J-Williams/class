@@ -1,0 +1,18 @@
+{
+  "title": "Science: States of Matter",
+  "categories": ["Solid", "Liquid", "Gas"],
+  "items": [
+    { "type": "text", "content": "Ice", "answer": "Solid" },
+    { "type": "text", "content": "Water", "answer": "Liquid" },
+    { "type": "text", "content": "Steam", "answer": "Gas" },
+    { "type": "text", "content": "Rock", "answer": "Solid" },
+    { "type": "text", "content": "Milk", "answer": "Liquid" },
+    { "type": "text", "content": "Oxygen", "answer": "Gas" },
+    { "type": "text", "content": "Wood", "answer": "Solid" },
+    { "type": "text", "content": "Juice", "answer": "Liquid" },
+    { "type": "text", "content": "Carbon Dioxide", "answer": "Gas" },
+    { "type": "text", "content": "Plastic", "answer": "Solid" },
+    { "type": "text", "content": "Petrol", "answer": "Liquid" },
+    { "type": "text", "content": "Helium", "answer": "Gas" }
+  ]
+}

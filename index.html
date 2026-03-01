@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Classroom Activities</title>
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #222;
+      }
+      canvas {
+        display: block;
+      }
+
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+
+
+
+  body, input, button, div {
+    font-family: "FreeSans", Arial, sans-serif !important;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input {
+    font-family: "FreeSans", Arial, sans-serif !important;
+    font-size: 28px; 
+    font-weight: normal; 
+  }
+
+   #outputBox {
+    font-family: "FreeSans", Arial, sans-serif !important;
+    font-size: 28px;
+    font-weight: normal;
+  }
+
+
+    </style>
+  </head>
+  <body>
+    <canvas id="game"></canvas>
+
+  <input id="numberInput"
+       type="number"
+       style="
+         position:absolute;
+         display:none;
+
+         /* Text appearance */
+         color:white;
+         font-size:28px;
+         font-weight:bold;
+
+         /* Remove background + borders */
+         background:transparent;
+         border:none;
+         outline:none;
+
+         /* Reset appearance so typing works */
+         -webkit-appearance:textfield;
+         appearance:textfield;
+   ">
+
+  <button id="openInputButton"
+          style="
+            position:absolute;
+            display:none;
+            background:transparent;
+            border:none;
+            padding:0;
+            margin:0;
+            cursor:pointer;
+          ">
+  </button>
+
+<button id="pinkButton"
+        style="
+          position:absolute;
+          display:none;
+          background:transparent;
+          border:none;
+          padding:0;
+          margin:0;
+          cursor:pointer;
+        ">
+</button>
+
+<button id="infoButton"
+        style="
+          position:absolute;
+          display:none;
+          background:transparent;
+          border:none;
+          padding:0;
+          margin:0;
+          cursor:pointer;
+        ">
+</button>
+
+<div id="outputBox"
+     style="
+         position:absolute;
+         display:none;
+
+         /* Text appearance */
+         color:white;
+         font-size:28px;
+         font-weight:bold;
+
+         /* Remove background + borders */
+         background:transparent;
+         border:none;
+         outline:none;
+
+         /* Reset appearance so typing works */
+         -webkit-appearance:textfield;
+         appearance:textfield;
+     ">
+</div>
+
+<!-- Popup Panel -->
+<div id="popupPanel" style="
+  position:absolute;
+  display:none;
+  background: rgba(0,0,0,0.8);
+  padding:20px;
+  border-radius:10px;
+  color:white;
+  font-family:sans-serif;
+">
+<div id="popupLabel" style="margin-bottom:10px; font-size:20px;">
+  <strong>Enter your secret code:</strong><br>
+  <span style="font-size:16px; color:#ccc;">
+    You can type +, -, x, / and brackets ( ).<br>
+    Example: <em>+5x(6-2)</em><br><br>
+
+    The machine always follows the <strong>order of operations</strong>.<br>
+    Brackets, multiplication and division, addition and subtraction.
+  </span>
+</div>
+
+  <input id="popupInput" type="text" style="
+    width:200px;
+    height:40px;
+    font-size:24px;
+    margin-bottom:10px;
+    border:none;
+    outline:none;
+    padding:5px;
+  ">
+
+  <button id="popupOk" style="
+    width:100px;
+    height:40px;
+    font-size:20px;
+    cursor:pointer;
+  ">
+    OK
+  </button>
+</div>
+
+<div id="flipPanel"
+     style="
+       position:absolute;
+       display:none;
+       background:rgba(0,0,0,0.85);
+       color:white;
+       padding:20px;
+       border-radius:12px;
+       width:700px;
+       font-size:20px;
+       box-shadow:0 0 20px rgba(0,0,0,0.6);
+     ">
+  
+  <div id="flipPanelHeading" style="font-size:26px; font-weight:bold; margin-bottom:10px;">
+    Instructions
+  </div>
+
+  <div id="flipPanelContent" style="font-size:22px; line-height:1.4;">
+    You need two players.<br>
+    The game is to reach the goal number first.<br>
+    Choose a number up to 84. This is the goal.<br>
+    Players take turns to tap a card to flip it. They say the running total adding the card's value on.<br>
+    eg player one flips 6 and calls "6" player two flips 5, adds it to the last total and calls "11".<br>
+    Play continues until the goal is reached or there are no more moves.<br>
+    The winner is the player who reaches the goal number or the last player to add successfully without going over the goal.<br>
+  </div>
+
+  <button id="flipPanelClose"
+          style="
+            margin-top:15px;
+            padding:8px 16px;
+            font-size:18px;
+            border:none;
+            border-radius:6px;
+            background:#6966ff;
+            color:white;
+            cursor:pointer;
+          ">
+    Close
+  </button>
+
+</div>
+
+<div id="sorterPanel"
+     style="
+       position:absolute;
+       left:20px;
+       top:20px;
+       width:1240px;
+       height:825px;
+       padding:10px;
+       background:rgba(0,0,0,0.6);
+       color:white;
+       font-family: FreeSans, Arial, sans-serif;
+       display:none;
+       box-sizing:border-box;
+     ">
+
+  <!-- Left: student list -->
+  <div style="float:left; width:35%; padding-right:10px; box-sizing:border-box;">
+    <div style="font-size:22px; margin-bottom:6px;">Student list</div>
+
+    <div id="sorterStudentListContainer"
+        style="
+          width:100%;
+          height:670px;
+          overflow-y:auto;
+          background:rgba(0,0,0,0.3);
+          padding:4px;
+          box-sizing:border-box;
+        ">
+    </div>
+
+    <div style="margin-top:10px;">
+      <input id="sorterAddName"
+             type="text"
+             placeholder="New student name"
+             style="width:60%; font-size:18px;">
+      <button id="sorterAddButton" style="font-size:18px; margin-left:5px;">Add</button>
+    </div>
+
+    <div style="margin-top:6px;">
+      <input id="sorterRemoveName"
+             type="text"
+             placeholder="Remove name"
+             style="width:60%; font-size:18px;">
+      <button id="sorterRemoveButton" style="font-size:18px; margin-left:5px;">Remove</button>
+    </div>
+
+    <div style="margin-top:10px;">
+      <button id="sorterSaveButton" style="font-size:18px;">Save list</button>
+    </div>
+  </div>
+
+  <!-- Right: group settings -->
+  <div style="float:left; width:65%; box-sizing:border-box;">
+    <div style="font-size:22px; margin-bottom:6px;">Group settings</div>
+
+    <div style="margin-bottom:8px;">
+      <label style="font-size:20px;">
+        Number of groups:
+        <input id="sorterNumGroups"
+               type="number"
+               min="1"
+               style="width:80px; font-size:20px;">
+      </label>
+    </div>
+
+    <div style="margin-bottom:8px;">
+      <label style="font-size:20px;">
+        OR group size:
+        <input id="sorterGroupSize"
+               type="number"
+               min="1"
+               style="width:80px; font-size:20px;">
+      </label>
+    </div>
+
+    <div style="margin-bottom:12px;">
+      <button id="sorterGenerateButton" style="font-size:20px; padding:6px 16px;">
+        Generate groups
+      </button>
+    </div>
+
+    <div style="clear:both;"></div>
+
+    <div style="font-size:20px; margin-top:10px; margin-bottom:4px;">
+      Groups
+    </div>
+    <div id="sorterGroupsOutput"
+         style="
+           width:100%;
+           height:520px;
+           overflow-y:auto;
+           background:rgba(0,0,0,0.4);
+           padding:8px;
+           box-sizing:border-box;
+           font-size:20px;
+         ">
+    </div>
+  </div>
+
+  <div style="clear:both;"></div>
+</div>
+
+<input type="file" id="activityLoader" accept=".json" style="display:none">
+
+<script type="module">
+  import { Engine } from "./engine.js";
+  import { MainMenuScene } from "./scenes/MainMenuScene.js";
+
+  const canvas = document.getElementById("game");
+  const engine = new Engine(canvas);
+
+  engine.setScene(new MainMenuScene());
+
+  const loader = document.getElementById("activityLoader");
+  if (loader) {
+    loader.addEventListener("change", async (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const text = await file.text();
+      const data = JSON.parse(text);
+
+      const scene = engine.scene;
+
+      if (scene && typeof scene.buildLayout === "function") {
+        scene.buildLayout(data.categories, data.items, data.title);
+        scene.hasChecked = false;
+      }
+    });
+  }
+</script>
+
+
+  </body>
+</html>

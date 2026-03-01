@@ -1,0 +1,18 @@
+{
+  "title": "Animal Classification Sort",
+  "categories": ["Mammal", "Reptile", "Bird", "Fish", "Amphibian"],
+  "items": [
+    { "type": "text", "content": "Lion", "answer": "Mammal" },
+    { "type": "text", "content": "Eagle", "answer": "Bird" },
+    { "type": "text", "content": "Shark", "answer": "Fish" },
+    { "type": "text", "content": "Frog", "answer": "Amphibian" },
+    { "type": "text", "content": "Snake", "answer": "Reptile" },
+    { "type": "text", "content": "Elephant", "answer": "Mammal" },
+    { "type": "text", "content": "Crocodile", "answer": "Reptile" },
+    { "type": "text", "content": "Salmon", "answer": "Fish" },
+    { "type": "text", "content": "Penguin", "answer": "Bird" },
+    { "type": "text", "content": "Dog", "answer": "Mammal" },
+    { "type": "text", "content": "Toad", "answer": "Amphibian" },
+    { "type": "text", "content": "Parrot", "answer": "Bird" }
+  ]
+}
