@@ -2,11 +2,11 @@
   "title": "Animal Picture Sort",
   "categories": ["Farm Animals", "Wild Animals"],
   "items": [
-    { "type": "image", "content": "https://raw.githubusercontent.com/C-J-Williams/pictures/8e3e26f944aeca686dec30d4be7f0ffcd42a90b4/chicken.png", "answer": "Farm Animals" },
-    { "type": "image", "content": "https://raw.githubusercontent.com/C-J-Williams/pictures/8e3e26f944aeca686dec30d4be7f0ffcd42a90b4/cow.png", "answer": "Farm Animals" },
-    { "type": "image", "content": "https://raw.githubusercontent.com/C-J-Williams/pictures/8e3e26f944aeca686dec30d4be7f0ffcd42a90b4/sheep.png", "answer": "Farm Animals" },
-    { "type": "image", "content": "https://raw.githubusercontent.com/C-J-Williams/pictures/8e3e26f944aeca686dec30d4be7f0ffcd42a90b4/elephant.png", "answer": "Wild Animals" },
-    { "type": "image", "content": "https://raw.githubusercontent.com/C-J-Williams/pictures/8e3e26f944aeca686dec30d4be7f0ffcd42a90b4/lion.png", "answer": "Wild Animals" },
-    { "type": "image", "content": "https://raw.githubusercontent.com/C-J-Williams/pictures/8e3e26f944aeca686dec30d4be7f0ffcd42a90b4/zebra.png", "answer": "Wild Animals" }
+    { "type": "image", "content": "images/chicken.png", "answer": "Farm Animals" },
+    { "type": "image", "content": "images/cow.png", "answer": "Farm Animals" },
+    { "type": "image", "content": "images/sheep.png", "answer": "Farm Animals" },
+    { "type": "image", "content": "images/elephant.png", "answer": "Wild Animals" },
+    { "type": "image", "content": "images/lion.png", "answer": "Wild Animals" },
+    { "type": "image", "content": "images/zebra.png", "answer": "Wild Animals" }
   ]
 }
