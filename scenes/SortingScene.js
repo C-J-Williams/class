@@ -209,11 +209,11 @@ export class SortingScene {
     }
   }
 
-  onPointerMove(screenX, screenY) {
+  onPointerMove(pX, pY) {
     if (!this.isLoaded) return;
 
-    this.mouse.x = x;
-    this.mouse.y = y;
+    this.mouse.x = pX;
+    this.mouse.y = pY;
   }
 
 onPointerUp(x, y) {
