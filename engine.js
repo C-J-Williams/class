@@ -4,6 +4,9 @@ export class Engine {
 constructor(canvas) {
   this.canvas = canvas;
   this.ctx = canvas.getContext("2d");
+
+  this.canvas.style.touchAction = "none";
+
   this.scene = null;
   this.last = 0;
 
