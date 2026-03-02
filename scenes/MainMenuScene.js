@@ -102,7 +102,7 @@ draw(ctx, engine) {
 
   ctx.font = "32px Arial";
   ctx.fillStyle = "white";
-  ctx.fillText("Choose an item", 100, 80);
+  ctx.fillText("Choose an item - be patient loading may take a while.", 100, 80);
 
   ctx.font = "24px Arial";
   ctx.textBaseline = "middle";
