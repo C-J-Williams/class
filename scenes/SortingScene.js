@@ -424,7 +424,7 @@ layoutSolvedItems() {
     this.items.forEach(item => {
 
       // Card background
-      ctx.fillStyle = "rgba(255,255,255,0.9)";
+      ctx.fillStyle = "rgba(255,255,255)";
       ctx.strokeStyle = "black";
       ctx.lineWidth = 2;
       ctx.fillRect(item.x, item.y, item.w, item.h);
