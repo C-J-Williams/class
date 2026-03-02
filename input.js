@@ -77,21 +77,31 @@ export class Input {
     const t = e.touches[0];
     this.pointer.down = true;
     this.pointer.justPressed = true;
-    this.pointer.x = t.clientX;
-    this.pointer.y = t.clientY;
+
+    const rect = this.canvas.getBoundingClientRect();
+    const realX = t.clientX - rect.left;
+    const realY = t.clientY - rect.top;
+
+    this.pointer.x = (realX - this.engine.offsetX) / this.engine.scale;
+    this.pointer.y = (realY - this.engine.offsetY) / this.engine.scale;
+  }
+
+  onTouchMove(e) {
+    e.preventDefault();
+    const t = e.touches[0];
+
+    const rect = this.canvas.getBoundingClientRect();
+    const realX = t.clientX - rect.left;
+    const realY = t.clientY - rect.top;
+
+    this.pointer.x = (realX - this.engine.offsetX) / this.engine.scale;
+    this.pointer.y = (realY - this.engine.offsetY) / this.engine.scale;
   }
 
   onTouchEnd(e) {
     e.preventDefault();
     this.pointer.down = false;
     this.pointer.justReleased = true;
-  }
-
-  onTouchMove(e) {
-    e.preventDefault();
-    const t = e.touches[0];
-    this.pointer.x = t.clientX;
-    this.pointer.y = t.clientY;
   }
 
   // --- KEYBOARD EVENTS ---
