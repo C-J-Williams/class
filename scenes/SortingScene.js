@@ -1,5 +1,5 @@
 export class SortingScene {
-  constructor(configPath = "../activities/parts_of_speech.json") {
+  constructor(configPath = "./activities/parts_of_speech.json") {
     this.configPath = configPath;
 
     this.engine = null;
@@ -25,12 +25,12 @@ export class SortingScene {
     this.hasChecked = false;
 
     this.availableLists = [
-      { label: "Parts of Speech", path: "../activities/parts_of_speech.json" },
-      { label: "Animals", path: "../activities/animals.json" },
-      { label: "Maths Operations", path: "../activities/operations.json" },
-      { label: "IT Terms", path: "../activities/computer.json" },
-      { label: "Land Forms", path: "../activities/landforms.json" },
-      { label: "States of Matter", path: "../activities/statesofmatter.json" },
+      { label: "Parts of Speech", path: "./activities/parts_of_speech.json" },
+      { label: "Animals", path: "./activities/animals.json" },
+      { label: "Maths Operations", path: "./activities/operations.json" },
+      { label: "IT Terms", path: "./activities/computer.json" },
+      { label: "Land Forms", path: "./activities/landforms.json" },
+      { label: "States of Matter", path: "./activities/statesofmatter.json" },
       { label: "Load from Computer…", path: null }
     ];
   }
