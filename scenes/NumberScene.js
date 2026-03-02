@@ -17,15 +17,15 @@ export class NumberScene {
     this.outputBox = document.getElementById("outputBox");
 
     this.buttonUp = new Image();
-    this.buttonUp.src = "/machine/goup.png";
+    this.buttonUp.src = "./machine/goup.png";
 
     this.buttonDown = new Image();
-    this.buttonDown.src = "/machine/godown.png";
+    this.buttonDown.src = "./machine/godown.png";
 
     this.currentButtonImage = this.buttonUp;
 
-    this.clickSound = new Audio("/machine/click.mp3");
-    this.machineSound = new Audio("/machine/machine.mp3");
+    this.clickSound = new Audio("./machine/click.mp3");
+    this.machineSound = new Audio("./machine/machine.mp3");
 
     this.machineSound.loop = true;
   }
@@ -54,15 +54,15 @@ export class NumberScene {
     this.outputBox.style.display = "block";
 
     // Load layers
-    this.background = await this.loadImage("/machine/background.png");
-    this.topLayer = await this.loadImage("/machine/screwlayer.png");
+    this.background = await this.loadImage("./machine/background.png");
+    this.topLayer = await this.loadImage("./machine/screwlayer.png");
 
     // Load gear images
-    const gear1Img = await this.loadImage("/machine/n009.png");
-    const gear2Img = await this.loadImage("/machine/n008.png");
-    const gear3Img = await this.loadImage("/machine/n004.png");
-    const gear4Img = await this.loadImage("/machine/n002.png");
-    const gear5Img = await this.loadImage("/machine/n001.png");
+    const gear1Img = await this.loadImage("./machine/n009.png");
+    const gear2Img = await this.loadImage("./machine/n008.png");
+    const gear3Img = await this.loadImage("./machine/n004.png");
+    const gear4Img = await this.loadImage("./machine/n002.png");
+    const gear5Img = await this.loadImage("./machine/n001.png");
 
     // Add gears to the array
     this.gears.push({
