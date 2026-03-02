@@ -3,10 +3,10 @@
   "categories": ["Farm Animals", "Wild Animals"],
   "items": [
     { "type": "image", "content": "./activities/images/chicken.png", "answer": "Farm Animals" },
-    { "type": "image", "content": "images/cow.png", "answer": "Farm Animals" },
-    { "type": "image", "content": "images/sheep.png", "answer": "Farm Animals" },
-    { "type": "image", "content": "images/elephant.png", "answer": "Wild Animals" },
-    { "type": "image", "content": "images/lion.png", "answer": "Wild Animals" },
-    { "type": "image", "content": "images/zebra.png", "answer": "Wild Animals" }
+    { "type": "image", "content": "./activities/images/cow.png", "answer": "Farm Animals" },
+    { "type": "image", "content": "./activities/images/sheep.png", "answer": "Farm Animals" },
+    { "type": "image", "content": "./activities/images/elephant.png", "answer": "Wild Animals" },
+    { "type": "image", "content": "./activities/images/lion.png", "answer": "Wild Animals" },
+    { "type": "image", "content": "./activities/images/zebra.png", "answer": "Wild Animals" }
   ]
 }
